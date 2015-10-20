@@ -19,6 +19,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'dotenv-rails'
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end

@@ -1,0 +1,14 @@
+var map;
+function initMap() {
+	map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 37.758830, lng: -122.337745},
+    zoom: 11
+  });
+
+  map.data.loadGeoJson('sf-oak-neighborhoods.json');
+
+  map.data.addListener('mouseover', function(event) {
+    document.getElementById('label').textContent =
+    	event.feature.getProperty('NAME');
+  });
+}
