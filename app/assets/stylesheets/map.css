@@ -12,9 +12,14 @@ html, body {
 #map {
 	height: 80%; 
 }
-#label{
+#label {
+	  top: 10px;
+}
+#lookup {
+  top: 100px;
+}
+#label, #lookup {
 	position: absolute;
-  top: 10px;
   left: 20%;
   z-index: 5;
   background-color: #fff;

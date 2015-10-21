@@ -13,3 +13,6 @@ $ ogr2ogr -f GeoJSON -where 'CITY="San Francisco" OR CITY="Oakland"' < your_file
 I used the [Google Maps Javascript API](https://developers.google.com/maps/documentation/javascript/tutorial) for the base map and added the GeoJSON file as a [data layer](https://developers.google.com/maps/documentation/javascript/datalayer), which draws the neighborhood Polygons based on the coordinates from the file.
 
 I then used the Mouseover map listener to expose the neighborhood name when you hover over it.
+
+
+I'm currently working on a feature to enable the user to type in their address and let them know what neighborhood they live in. More to come soon.
