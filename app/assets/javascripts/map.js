@@ -3,9 +3,9 @@ var map;
 var geocoder;
 
 function init() {
-	geocoder = new google.maps.Geocoder();
+  geocoder = new google.maps.Geocoder();
 
-	map = new google.maps.Map(document.getElementById('map'), {
+  map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 37.758830, lng: -122.337745},
     zoom: 11
   });
@@ -14,12 +14,12 @@ function init() {
 
   map.data.addListener('mouseover', function(event) {
     document.getElementById('label').textContent =
-    	event.feature.getProperty('NAME');
+      event.feature.getProperty('NAME');
   });
 
-	document.getElementById('address-submit').addEventListener('click', function() {
-		geocodeAddress(geocoder, map);
-	});
+  document.getElementById('address-submit').addEventListener('click', function() {
+    geocodeAddress(geocoder, map);
+  });
 }
 
 function geocodeAddress(geocoder, resultsMap) {
@@ -33,7 +33,7 @@ function geocodeAddress(geocoder, resultsMap) {
       });
     } else {
       document.getElementById('label').textContent =
-      	"Sorry, couldn't find your neighborhood!"
+        "Sorry, couldn't find your neighborhood!"
     }
   });
 }
